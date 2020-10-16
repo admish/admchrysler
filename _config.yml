@@ -34,19 +34,19 @@ analytics-google: 'UA-16988152-1'
 #   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: adium
+# facebook: adium
 twitter: admish
-instagram: admish
+# instagram: admish
 # pinterest: mypinterest
 linkedin: adium
-youtube: adium
+# youtube: adium
 # spotify: myspotify
 github: admish
 # gitlab: mygitlab
 # lastfm: mylastfm
 stackoverflow: 2589674/admish
 # quora: userquora
-reddit: adium
+# reddit: adium
 # medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
@@ -67,7 +67,7 @@ width: normal
 
 # if you do/don't need pagination, toggle 'enabled' between true/false below
 pagination:
-  enabled: false
+  enabled: true
   sort_reverse: true # display recent posts first
   title: ":title" # Changing this will mess up the header display logic
   per_page: 5
