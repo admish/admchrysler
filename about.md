@@ -4,44 +4,31 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<a href="https://admchrysler.com/pgp">PGP Key</a>
 
-<p>I am the IT Manager for the <a href="https://wicmb.cornell.edu/">Weill Institute for Cell and Molecular Biology</a> at Cornell University. I specialize in system administration for Linux systems used in research biology that are used specifically for structural genomics and simulations, cryoem, </p>
 
-<h2>Skills</h2>
+I am the IT Manager for the [Weill Institute for Cell and Molecular Biology][1] at Cornell University. I specialize in system administration for Linux systems used in research biology that are used specifically for structural genomics and simulations, cryoem,
 
+
+<!--
 <ul class="skill-list">
 	<li>Linux command line and configuration</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Testes)</li>
-	<li>NodeJS</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
 </ul>
-
-<h2>Projects</h2>
-
-<ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
-</ul>
+-->
 
 ### Contact
-Adm Chrysler  
-Weill Institute for Cell and Molecular Biology  
-Cornell University  
-353 Weill Hall  
-Ithaca, New York 14853  
-USA  
+Adm Chrysler
+[Weill Institute for Cell and Molecular Biology][1]
+[Cornell University][2]
+353 Weill Hall
+Ithaca, New York 14853
+USA
 
-Email: chrysler@cornell.edu
+Email: [chrysler@cornell.edu][3]
+PGP Fingerprint: [BAA4 D073 4DF0 3BE1 A0C0 63CA AC3A BCDA 0CE1 914E][4]
 Phone: 607-255-7312
+
+
+[1]: https://wicmb.cornell.edu
+[2]: https://www.cornell.edu
+[3]: mailto:chrysler@cornell.edu
+[4]: /pgp

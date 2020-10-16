@@ -101,6 +101,12 @@
         </a>
     {% endif %}
 
+    {% if site.codepen %}
+        <a class="link" data-title="codepen.io/{{ site.codepen }}" href="https://codepen.io/{{ site.codepen }}" target="_blank">
+            <svg class="icon icon-codepen"><use xlink:href="#icon-codepen"></use></svg>
+        </a>
+    {% endif %}
+
     {% if site.email %}
         <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}">
             <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
