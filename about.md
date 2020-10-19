@@ -16,16 +16,16 @@ I am the IT Manager for the [Weill Institute for Cell and Molecular Biology][1] 
 -->
 
 ### Contact
-Adm Chrysler
-[Weill Institute for Cell and Molecular Biology][1]
-[Cornell University][2]
-353 Weill Hall
-Ithaca, New York 14853
-USA
-
-Email: [chrysler@cornell.edu][3]
-PGP Fingerprint: [BAA4 D073 4DF0 3BE1 A0C0 63CA AC3A BCDA 0CE1 914E][4]
-Phone: 607-255-7312
+Adm Chrysler  
+[Weill Institute for Cell and Molecular Biology][1]  
+[Cornell University][2]  
+353 Weill Hall  
+Ithaca, New York 14853  
+USA  
+  
+Email: [chrysler@cornell.edu][3]  
+PGP Fingerprint: [BAA4 D073 4DF0 3BE1 A0C0 63CA AC3A BCDA 0CE1 914E][4]  
+Phone: 607-255-7312  
 
 
 [1]: https://wicmb.cornell.edu
