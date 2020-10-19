@@ -20,6 +20,7 @@ url: https://admchrysler.com
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
+build: /
 
 # To enable google analytics, supply your token below
 analytics-google: 'UA-16988152-1'
