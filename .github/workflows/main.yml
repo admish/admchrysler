@@ -1,9 +1,0 @@
-workflow "Build Site" {
-  on = "push"
-  resolves = ["Build Jekyll"]
-}
-
-action "Build Jekyll" {
-  uses = "BryanSchuetz/jekyll-deploy-gh-pages/build@master"
-  secrets = ["f56616703e4dece13de2dd06e73f48e284f5ac74"]
-}
