@@ -119,7 +119,7 @@ plugins:
   - jekyll-paginate-v2
 
 jekyll-mentions:
-  base_url: https://github.com
+  base_url: https://admchrysler.com
 
 compress_html:
   ignore:
