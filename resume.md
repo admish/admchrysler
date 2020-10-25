@@ -3,11 +3,14 @@ title: Résumé (CV)
 layout: page
 ---
 
-Self-motivated and goal-oriented creative professional with over 15 years’ experience working with computers, networking equipment, and web development. Military background working with encrypted communications equipment, which required a 'Secret' level security clearance. Educational background in web design and Java programming.
-
 ## Employment
 
-### Technology Consultant | Cornell University 2013-Present | Ithaca, NY
+
+### IT Manager / System Administrator | Cornell University 2015-Present | Ithaca, NY
+* Responsible for over 180 users and 300 machines
+
+
+### Technology Consultant | Cornell University 2013-2015 | Ithaca, NY
 * Fulfilled online e-shop orders for Technology Connection
 * Volume software licensing and support for entire campus
 * Handled ordering for all Apple products on campus
