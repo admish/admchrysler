@@ -1,7 +1,7 @@
 ---
 title: "Using XQuartz with Linux"
 layout: post
-date: 2020-10-29 19:04
+date: 2020-10-28 19:04
 image: /assets/images/X11app.png
 headerImage: true
 hidden: false
