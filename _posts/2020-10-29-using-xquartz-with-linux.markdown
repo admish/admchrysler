@@ -3,7 +3,7 @@ title: "Using XQuartz with Linux"
 layout: post
 date: 2020-10-29 19:04
 image: /assets/images/X11app.png
-headerImage: false
+headerImage: true
 hidden: false
 tag:
 - macos

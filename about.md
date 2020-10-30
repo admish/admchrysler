@@ -6,7 +6,7 @@ layout: page
 
 
 
-I am the IT Manager for the [Weill Institute for Cell and Molecular Biology][1] at Cornell University. I specialize in system administration for Linux systems used in research biology that are used specifically for structural genomics and simulations, cryoem,
+I am the IT Manager for the [Weill Institute for Cell and Molecular Biology][1] at Cornell University. My skills focus on provinding Linux system administration used to research several biological areas of study such as structural genomics and simulations, cryogenic electron microscopy, and computational morphodynamics.
 
 
 <!--

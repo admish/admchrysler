@@ -7,8 +7,13 @@ layout: page
 
 
 ### IT Manager / System Administrator | Cornell University 2015-Present | Ithaca, NY
-* Responsible for over 180 users and 300 machines
-
+* Provide Linux/Unix administration, including shell scripting, for several labs in the Institute.
+* Conduct MySQL and PostgreSQL database administration in Linux environments, including performance analysis and tuning.
+* Work with machine learning, predictive modeling, and related development technologies. 
+* Help data scientists set up custom Conda Python coding notebooks in development environments for use on a JupyterHub host,and capturing it for automated deployment.
+* Create and migrate virtual machines using Docker, VMWare, and other similar technologies.
+* Develop and maintain multiple Web servers, related applications, and Services Oriented Architectures (such as Apache, NGINX, Python, PHP, SQL and Flask).
+* Provide nameserver administration of hostnames and domain names.
 
 ### Technology Consultant | Cornell University 2013-2015 | Ithaca, NY
 * Fulfilled online e-shop orders for Technology Connection
