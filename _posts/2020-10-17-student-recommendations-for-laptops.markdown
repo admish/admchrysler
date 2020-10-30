@@ -4,7 +4,7 @@ layout: post
 date: 2020-10-17 12:08
 image: /assets/images/markdown.jpg
 headerImage: false
-hidden: true
+hidden: false
 tag:
 - laptops
 - shopping
