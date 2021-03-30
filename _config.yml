@@ -21,6 +21,7 @@ url: https://admchrysler.com
 
 permalink: /:title/
 build: /
+repository: admish/admchrysler
 
 # To enable google analytics, supply your token below
 analytics-google: 'UA-16988152-1'
