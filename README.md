@@ -25,4 +25,4 @@ pgp.md
 * Get rid of the loren ipsum's
 * Create list of projects
 * Write a blog post or two
-*
+
