@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://admchrysler.com/pages/admish/admchrysler/feed.xml" rel="self" type="application/atom+xml" /><link href="https://admchrysler.com/pages/admish/admchrysler/" rel="alternate" type="text/html" /><updated>2024-06-01T00:59:24+00:00</updated><id>https://admchrysler.com/pages/admish/admchrysler/feed.xml</id><title type="html">Adm Chrysler</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Using XQuartz with Linux</title><link href="https://admchrysler.com/pages/admish/admchrysler/using-xquartz-with-linux/" rel="alternate" type="text/html" title="Using XQuartz with Linux" /><published>2020-10-28T19:09:00+00:00</published><updated>2020-10-28T19:09:00+00:00</updated><id>https://admchrysler.com/pages/admish/admchrysler/using-xquartz-with-linux</id><content type="html" xml:base="https://admchrysler.com/pages/admish/admchrysler/using-xquartz-with-linux/"><![CDATA[<h2 id="installing-xquartz">Installing XQuartz</h2>
+
+<p>Complete all of these steps on your own Mac. NOT on the remote machine.</p>
+
+<ol>
+  <li>Install the latest version of <a href="https://www.xquartz.org/">XQuartz</a></li>
+  <li>Edit the file <code class="language-plaintext highlighter-rouge">~/.ssh/config</code> and add the line
+  <code class="language-plaintext highlighter-rouge">XAuthLocation /opt/X11/bin/xauth</code></li>
+  <li>Run the command: 
+  <code class="language-plaintext highlighter-rouge">defaults write org.macosforge.xquartz.X11 enable_iglx -bool true</code></li>
+  <li>SSH into the machine using -X (e.g. <code class="language-plaintext highlighter-rouge">ssh -X user@192.168.0.1</code>)</li>
+  <li>Type the terminal command to the GUI application</li>
+</ol>
+
+<p>XQuartz is also available through homebrew, but it is not always up to date with the latest version available. It is recommended to download the installer from the official <a href="https://www.xquartz.org/">XQuartz</a> website.</p>
+
+<h2 id="troubleshooting-common-errors">Troubleshooting Common Errors</h2>
+<h3 id="ssh-is-looking-for-xauth-in-the-wrong-path">SSH is looking for xauth in the wrong path.</h3>
+<p>Seen with the error: <strong>“Warning: untrusted X11 forwarding setup failed: xauth key data not generated”</strong></p>
+
+<p>This occurs when ssh is looking for xauth in <code class="language-plaintext highlighter-rouge">/usr/X11R6/bin</code> but on macOS with XQuartz it is located in <code class="language-plaintext highlighter-rouge">/opt/X11/bin</code>. 
+To set the correct path edit the <code class="language-plaintext highlighter-rouge">~/.ssh/config</code> file on your own computer, and add the following line 
+  <code class="language-plaintext highlighter-rouge">XAuthLocation /opt/X11/bin/xauth</code></p>
+
+<p>Do not use <code class="language-plaintext highlighter-rouge">ssh -Y</code> to bypass this error. This uses fake xauth information instead of establishing a secure session.</p>
+
+<hr />
+<h3 id="xquartz-is-allowing-indirect-glx-contexts">XQuartz is allowing indirect GLX contexts</h3>
+<p>Seen with the error: <strong>“XRequest.149: BadValue (integer parameter out of range for operation) 0x0 ERROR) Could not create OpenGL rendering context-&gt; Exiting…“</strong></p>
+
+<p>Completely exit out of XQuartz. In terminal on your local macOS system run the following command:</p>
+
+<p><code class="language-plaintext highlighter-rouge">defaults write org.macosforge.xquartz.X11 enable_iglx -bool true</code></p>
+
+<p>Reload or exit terminal on your local machine, then try logging in again with the <code class="language-plaintext highlighter-rouge">-X</code> parameter.</p>]]></content><author><name>admchrysler</name></author><category term="blog" /><category term="macos" /><category term="linux" /><category term="terminal" /><category term="xquartz" /><category term="ssh" /><summary type="html"><![CDATA[How to remotely use Linux GUI apps on macOS]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://admchrysler.com/pages/admish/admchrysler/assets/images/X11app.png" /><media:content medium="image" url="https://admchrysler.com/pages/admish/admchrysler/assets/images/X11app.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Using XQuartz with Linux</title><link href="https://admchrysler.com/pages/admish/admchrysler/using-xquartz-with-linux/" rel="alternate" type="text/html" title="Using XQuartz with Linux" /><published>2020-10-28T19:04:00+00:00</published><updated>2020-10-28T19:04:00+00:00</updated><id>https://admchrysler.com/pages/admish/admchrysler/using-xquartz-with-linux</id><content type="html" xml:base="https://admchrysler.com/pages/admish/admchrysler/using-xquartz-with-linux/"><![CDATA[<h2 id="installing-xquartz">Installing XQuartz</h2>
+
+<p>Complete all of these steps on your own Mac. NOT on the remote machine.</p>
+
+<ol>
+  <li>Install the latest version of <a href="https://www.xquartz.org/">XQuartz</a></li>
+  <li>Edit the file <code class="language-plaintext highlighter-rouge">~/.ssh/config</code> and add the line
+  <code class="language-plaintext highlighter-rouge">XAuthLocation /opt/X11/bin/xauth</code></li>
+  <li>Run the command: 
+  <code class="language-plaintext highlighter-rouge">defaults write org.macosforge.xquartz.X11 enable_iglx -bool true</code></li>
+  <li>SSH into the machine using -X (e.g. <code class="language-plaintext highlighter-rouge">ssh -X user@192.168.0.1</code>)</li>
+  <li>Type the terminal command to the GUI application</li>
+</ol>
+
+<p>XQuartz is also available through homebrew, but it is not always up to date with the latest version available. It is recommended to download the installer from the official <a href="https://www.xquartz.org/">XQuartz</a> website.</p>
+
+<h2 id="troubleshooting-common-errors">Troubleshooting Common Errors</h2>
+<h3 id="ssh-is-looking-for-xauth-in-the-wrong-path">SSH is looking for xauth in the wrong path.</h3>
+<p>Seen with the error: <strong>“Warning: untrusted X11 forwarding setup failed: xauth key data not generated”</strong></p>
+
+<p>This occurs when ssh is looking for xauth in <code class="language-plaintext highlighter-rouge">/usr/X11R6/bin</code> but on macOS with XQuartz it is located in <code class="language-plaintext highlighter-rouge">/opt/X11/bin</code>. 
+To set the correct path edit the <code class="language-plaintext highlighter-rouge">~/.ssh/config</code> file on your own computer, and add the following line 
+  <code class="language-plaintext highlighter-rouge">XAuthLocation /opt/X11/bin/xauth</code></p>
+
+<p>Do not use <code class="language-plaintext highlighter-rouge">ssh -Y</code> to bypass this error. This uses fake xauth information instead of establishing a secure session.</p>
+
+<hr />
+<h3 id="xquartz-is-allowing-indirect-glx-contexts">XQuartz is allowing indirect GLX contexts</h3>
+<p>Seen with the error: <strong>“XRequest.149: BadValue (integer parameter out of range for operation) 0x0 ERROR) Could not create OpenGL rendering context-&gt; Exiting…“</strong></p>
+
+<p>Completely exit out of XQuartz. In terminal on your local macOS system run the following command:</p>
+
+<p><code class="language-plaintext highlighter-rouge">defaults write org.macosforge.xquartz.X11 enable_iglx -bool true</code></p>
+
+<p>Reload or exit terminal on your local machine, then try logging in again with the <code class="language-plaintext highlighter-rouge">-X</code> parameter.</p>]]></content><author><name>admchrysler</name></author><category term="blog" /><category term="macos" /><category term="linux" /><category term="terminal" /><category term="xquartz" /><category term="ssh" /><summary type="html"><![CDATA[How to remotely use Linux GUI apps on macOS]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://admchrysler.com/pages/admish/admchrysler/assets/images/X11app.png" /><media:content medium="image" url="https://admchrysler.com/pages/admish/admchrysler/assets/images/X11app.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fall 2020 Laptops for Students</title><link href="https://admchrysler.com/pages/admish/admchrysler/fall-student-laptops/" rel="alternate" type="text/html" title="Fall 2020 Laptops for Students" /><published>2020-09-27T19:04:00+00:00</published><updated>2020-09-27T19:04:00+00:00</updated><id>https://admchrysler.com/pages/admish/admchrysler/fall-student-laptops</id><content type="html" xml:base="https://admchrysler.com/pages/admish/admchrysler/fall-student-laptops/"><![CDATA[<p>Here is my current list of laptops, ordered by price. I’ve included the Passmark Score just under the CPU. This is a benchmark of the CPU, higher is better, to help compare performance between CPU’s. If no graphics card is mentioned, then they are using integrated graphics (sharing the CPU).</p>
+
+<p>Links are non-referral and pricing includes academic discounts.</p>
+
+<p><strong>Lenovo ThinkPad X1 Carbon Gen 8 20U9001PUS</strong>: <a href="https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x1/X1-Carbon-Gen-8-/p/20U9001PUS">$1,000</a></p>
+<ul>
+  <li>14.0” FHD (1920 x 1080) IPS, anti-glare, 400 nits</li>
+  <li>Intel i5-10210U (Quad-Core 1.60 GHz, 6M Cache, up to 4.20 GHz)</li>
+  <li>Passmark Score: 6,527</li>
+  <li>16 GB LPDDR3 2133MHz (Soldered)</li>
+  <li>512 GB PCIe SSD</li>
+  <li>Integrated Intel UHD Graphics</li>
+</ul>
+
+<p><strong>ASUS ZenBook 14 UX434FLC</strong>: <a href="https://www.bhphotovideo.com/c/product/1543085-REG/asus_ux434flc_xh77_zenbook_ux434flc_i7_10510u_16gb.html">$1,200</a></p>
+<ul>
+  <li>14” 1920 x 1080 Full HD Display</li>
+  <li>Intel i7-10510U (Quad-Core 1.8 GHz, 8M Cache, up to 4.90 GHz)</li>
+  <li>Passmark Score: 7,062</li>
+  <li>16GB LPDDR3</li>
+  <li>512GB PCIe 3.0 SSD</li>
+  <li>NVIDIA GeForce MX250 (2GB GDDR5)</li>
+</ul>
+
+<p><strong>Lenovo ThinkPad X1 Carbon Gen 8 20U9005MUS</strong>: <a href="https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x1/X1-Carbon-Gen-8-/p/20U9005MUS">$1,200</a></p>
+<ul>
+  <li>14.0” FHD (1920 x 1080) IPS, anti-glare, 400 nits</li>
+  <li>Intel i7-10510U (Quad-Core 1.80 GHz, 8M Cache, up to 4.90 GHz)</li>
+  <li>Passmark Score: 7,062</li>
+  <li>16 GB LPDDR3 2133MHz (Soldered)</li>
+  <li>1 TB PCIe SSD</li>
+  <li>Integrated Intel® UHD Graphics</li>
+</ul>
+
+<p><strong>Dell Precision 3550</strong>: <a href="https://www.dell.com/premier/configure/us/en/rc962594/?productId=S002P355015USR#/">$1,238.27</a></p>
+<ul>
+  <li>15.6” FHD 1920x1080</li>
+  <li>Intel i5-10210U (Quad-Core 1.60 GHz, 6M Cache, up to 4.20 GHz)</li>
+  <li>Passmark Score: 6,527</li>
+  <li>8GB, 1X8GB, DDR4 2666Mhz Non-ECC Memory</li>
+  <li>M.2 256GB PCIe NVMe Class 40 Solid State Drive</li>
+  <li>Nvidia Quadro P520 w/ 2GB GDDR5</li>
+</ul>
+
+<p><strong>Apple 13” MacBook Pro MXK72LL/A</strong> $1,400</p>
+<ul>
+  <li>13” Retina Display (2560 x 1600)</li>
+  <li>Intel i5-8257U (Quad-Core 1.40 GHz, 6M Cache, up to 3.90 GHz)</li>
+  <li>Passmark Score: 8,227</li>
+  <li>8GB 2133MHz LPDDR3 memory</li>
+  <li>512GB SSD storage</li>
+  <li>Integrated Intel UHD Graphics</li>
+</ul>
+
+<p><strong>Lenovo ThinkPad X1 Carbon Gen 8 20U9005NUS</strong>: <a href="https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x1/X1-Carbon-Gen-8-/p/20U9005NUS">$1,567</a></p>
+<ul>
+  <li>14.0” FHD (1920 x 1080) IPS, anti-glare, 400 nits</li>
+  <li>Intel i5-10310U (Quad-Core 1.70 GHz, 6M Cache, up to 4.40 GHz)</li>
+  <li>Passmark Score: 6,845</li>
+  <li>16 GB LPDDR3 2133MHz (Soldered)</li>
+  <li>512 GB PCIe SSD</li>
+  <li>Integrated Intel® UHD Graphics</li>
+</ul>
+
+<p><strong>Razer Blade Stealth 13</strong>: <a href="https://www.razer.com/gaming-laptops/Razer-Blade-Stealth-13/RZ09-03102E02-R3U1">$1,599.99</a></p>
+<ul>
+  <li>13.3” Full HD Matte 60Hz, w/ 4.9 mm slim side bezel</li>
+  <li>Intel i7-1065G7 (Quad-Core 1.30 GHz, 8M Cache, up to 3.90 GHz)</li>
+  <li>Passmark Score: 8,987</li>
+  <li>NVIDIA® GeForce GTX 1650 Ti Max-Q (4GB GDDR5 VRAM)</li>
+  <li>16GB RAM</li>
+  <li>512GB SSD</li>
+  <li>Thunderbolt 3</li>
+</ul>
+
+<p><strong>Dell Precision 3550</strong>: <a href="https://www.dell.com/premier/configure/us/en/rc962594/?productId=S013P355015USR#/">$1,645.77</a></p>
+<ul>
+  <li>15.6” FHD 1920x1080</li>
+  <li>Intel i7-10510U (Quad-Core 1.80 GHz, 8M Cache, up to 4.90 GHz)</li>
+  <li>Passmark Score: 7,062</li>
+  <li>16GB, 1X16GB, DDR4 2666Mhz Non-ECC Memory</li>
+  <li>M.2 512GB PCIe NVMe Class 40 Solid State Drive</li>
+  <li>Nvidia Quadro P520 w/ 2GB GDDR5</li>
+</ul>
+
+<p><strong>Apple 13” MacBook Pro MWP82LL/A</strong> $1,900</p>
+<ul>
+  <li>13” Retina Display (2560 x 1600)</li>
+  <li>Intel i5-1038NG7 (Quad-Core 2.00 GHz, 6M Cache, up to 3.80 GHz)</li>
+  <li>Passmark Score: 9,907</li>
+  <li>16GB 3733MHz LPDDR4X memory</li>
+  <li>1TB SSD storage</li>
+  <li>Integrated Intel UHD Graphics</li>
+</ul>
+
+<p><strong>Dell Precision 3550</strong>: <a href="https://www.dell.com/premier/configure/us/en/rc962594/?productId=S006P355015USR#/">$2,007.02</a></p>
+<ul>
+  <li>15.6” FHD 1920x1080</li>
+  <li>Intel i7-10510U (Quad-Core 1.80 GHz, 8M Cache, up to 4.90 GHz)</li>
+  <li>Passmark Score: 7,062</li>
+  <li>32GB, 2X16GB, DDR4 2666Mhz Non-ECC Memory</li>
+  <li>M.2 1TB PCIe NVMe Class 40 Solid State Drive</li>
+  <li>Nvidia Quadro P520 w/ 2GB GDDR5</li>
+</ul>
+
+<p><strong>Lenovo ThinkPad X1 Carbon Gen 8 20U9005KUS</strong>: <a href="https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x1/X1-Carbon-Gen-8-/p/20U9005KUS">$2,024</a></p>
+<ul>
+  <li>14.0” UHD (3840 x 2160) IPS, glossy with Dolby Vision™, HDR 400, 500 nits</li>
+  <li>Intel i7-10610U (Quad-Core 1.80 GHz, 8M Cache, up to 4.90 GHz)</li>
+  <li>Passmark Score: 7,317</li>
+  <li>16 GB LPDDR3 2133MHz (Soldered)</li>
+  <li>1 TB PCIe SSD</li>
+  <li>Integrated Intel® UHD Graphics</li>
+</ul>
+
+<p><strong>Apple 16” MacBook Pro MVVL2LL/A</strong> $2,200</p>
+<ul>
+  <li>16” Retina Display (3072 x 1920)</li>
+  <li>Intel i5-9750H (6-Core 2.60 GHz, 12M Cache, up to 4.50 GHz)</li>
+  <li>Passmark Score: 11,375</li>
+  <li>16GB 2666MHz DDR4 memory</li>
+  <li>512GB SSD storage</li>
+  <li>AMD Radeon Pro 5300M with 4GB of GDDR6 memory</li>
+</ul>
+
+<p><strong>Dell Precision 5550</strong>: <a href="https://www.dell.com/premier/configure/us/en/rc962594/?productId=S004P555015USR#/">$2,203.39</a></p>
+<ul>
+  <li>15.6” UltraSharp FHD+ (1920x1200)</li>
+  <li>Intel i7-10750H (6-Core 2.60 GHz, 12M Cache, up to 5.00 GHz)</li>
+  <li>Passmark Score: 12,690</li>
+  <li>32GB, 2X16GB, DDR4 2933Mhz Non-ECC Memory</li>
+  <li>M.2 512GB PCIe NVMe Class 40 Solid State Drive</li>
+  <li>NVIDIA Quadro T1000 (4GB)</li>
+</ul>
+
+<p><strong>ASUS ROG Zephyrus G14-ACRNM Ultra Slim Gaming Laptop</strong>: <a href="https://store.asus.com/us/item/202009AM190000001">$2,500</a>
+NO WEBCAM</p>
+<ul>
+  <li>14-inch QHD (2560 x 1440) 16:9 60Hz</li>
+  <li>AMD Ryzen 9 4900HS (8-Core 3.0 GHz, 8M Cache, up to 4.3 GHz)</li>
+  <li>Passmark Score: 19,896</li>
+  <li>GeForce RTX 2060</li>
+  <li>32GB DDR4</li>
+  <li>1TB M.2 NVMe™ PCIe® 3.0 SSD</li>
+  <li>Gig+ Wi-Fi 6</li>
+  <li>Windows 10 Pro</li>
+  <li>GA401IVC-RMT01</li>
+</ul>
+
+<p><strong>Lenovo ThinkPad X1 Fold (13”) 20RK000PUS</strong>: <a href="https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x1/X1-Fold-G1/p/20RK000PUS">$2,500</a>
+<strong>WARNING</strong> This screen folds down the center and I can not verify its longevity</p>
+<ul>
+  <li>13.3” QXGA Foldable 2K (1536 x 2048) OLED, touchscreen, 300 nits</li>
+  <li>Intel i5-L16G7 (5-Core 1.40 GHz, 4M Cache, up to 3.0GHz)</li>
+  <li>Passmark Score: 3,164</li>
+  <li>8 GB LPDDR4X 4267MHz (Soldered)</li>
+  <li>256 GB PCIe SSD</li>
+</ul>
+
+<p><strong>Apple 16” MacBook Pro MVVM2LL/A</strong> $2,600</p>
+<ul>
+  <li>16” Retina Display (3072 x 1920)</li>
+  <li>Intel i9-9880H (8-Core 2.30 GHz, 16M Cache, up to 4.80 GHz)</li>
+  <li>Passmark Score: 14,117</li>
+  <li>16GB 2666MHz DDR4 memory</li>
+  <li>1TB SSD storage</li>
+  <li>AMD Radeon Pro 5500M with 4GB of GDDR6 memory</li>
+</ul>
+
+<p><strong>Lenovo ThinkPad X1 Fold (13”) 20RK000LUS</strong>: <a href="https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x1/X1-Fold-G1/p/20RK000LUS">$3,100</a>
+<strong>WARNING</strong> This screen folds down the center and I can not verify its longevity</p>
+<ul>
+  <li>13.3” QXGA Foldable 2K (1536 x 2048) OLED, touchscreen, 300 nits</li>
+  <li>Intel i5-L16G7 (5-Core 1.40 GHz, 4M Cache, up to 3.0GHz)</li>
+  <li>Passmark Score: 3,164</li>
+  <li>8 GB LPDDR4X 4267MHz (Soldered)</li>
+  <li>1 TB PCIe SSD</li>
+</ul>]]></content><author><name>admchrysler</name></author><category term="blog" /><category term="laptops" /><category term="purchases" /><category term="students" /><summary type="html"><![CDATA[Recommended laptops for students during the Fall 2020 Semester]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://admchrysler.com/pages/admish/admchrysler/assets/images/X11app.png" /><media:content medium="image" url="https://admchrysler.com/pages/admish/admchrysler/assets/images/X11app.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Code snippet for creating new SQL</title><link href="https://admchrysler.com/pages/admish/admchrysler/quick-sql-snippet/" rel="alternate" type="text/html" title="Code snippet for creating new SQL" /><published>2016-11-21T12:32:00+00:00</published><updated>2016-11-21T12:32:00+00:00</updated><id>https://admchrysler.com/pages/admish/admchrysler/quick-sql-snippet</id><content type="html" xml:base="https://admchrysler.com/pages/admish/admchrysler/quick-sql-snippet/"><![CDATA[<p>Best method for quickly creating a new database and unique user in SQL that is universally compatible with php and cli based applications.</p>
+
+<p>Begin by logging in to MySQL/MariaDB through terminal with <code class="language-plaintext highlighter-rouge">mysql -u root -p</code>. Do not type password on this line to avoid it being recorded in <code class="language-plaintext highlighter-rouge">.bash_history</code> file. It will prompt for the password.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">db_name</code> : Name of SQL database</li>
+  <li><code class="language-plaintext highlighter-rouge">user_name</code> : Name of new SQL user that will have full access (limit 32 characters)</li>
+  <li><code class="language-plaintext highlighter-rouge">localhost</code> : IP address if SQL is on remote server</li>
+  <li><code class="language-plaintext highlighter-rouge">password</code> : Password for new SQL user (limit 32 characters)</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">db_name</span> <span class="k">DEFAULT</span> <span class="nb">CHARACTER</span> <span class="k">SET</span> <span class="n">utf8</span> <span class="k">COLLATE</span> <span class="n">utf8_unicode_ci</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">USER</span> <span class="s1">'user_name'</span><span class="o">@</span><span class="s1">'localhost'</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">'password'</span><span class="p">;</span>
+<span class="k">GRANT</span> <span class="k">ALL</span> <span class="k">PRIVILEGES</span> <span class="k">ON</span> <span class="n">db_name</span><span class="p">.</span><span class="o">*</span> <span class="k">TO</span> <span class="s1">'user_name'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
+<span class="n">FLUSH</span> <span class="k">PRIVILEGES</span><span class="p">;</span>
+<span class="n">EXIT</span><span class="p">;</span>
+</code></pre></div></div>]]></content><author><name>admchrysler</name></author><category term="blog" /><category term="snippets" /><category term="sql" /><category term="mysql" /><category term="mariadb" /><summary type="html"><![CDATA[Recommended laptops for students during the Fall 2020 Semester]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://admchrysler.com/pages/admish/admchrysler/assets/images/mysql.png" /><media:content medium="image" url="https://admchrysler.com/pages/admish/admchrysler/assets/images/mysql.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Custom Electrophoresis Comb Model</title><link href="https://admchrysler.com/pages/admish/admchrysler/custom-electrophoresis-comb/" rel="alternate" type="text/html" title="Custom Electrophoresis Comb Model" /><published>2016-02-10T15:03:00+00:00</published><updated>2016-02-10T15:03:00+00:00</updated><id>https://admchrysler.com/pages/admish/admchrysler/custom-electrophoresis-comb</id><content type="html" xml:base="https://admchrysler.com/pages/admish/admchrysler/custom-electrophoresis-comb/"><![CDATA[<p><a href="https://zenodo.org/badge/latestdoi/51589511"><img src="https://zenodo.org/badge/51589511.svg" alt="DOI" /></a> <a href=""><img src="https://img.shields.io/github/v/release/admish/Electrophoresis-Comb.svg" alt="GitHub release" /></a> <a href=""><img src="https://img.shields.io/github/license/admish/Electrophoresis-Comb.svg" alt="GitHub License" /></a> <a href=""><img src="https://img.shields.io/badge/OpenSCAD-2015.03--3-yellow.svg" alt="Supported on OpenSCAD 2015.03-3" /></a></p>
+
+<p>Customizable DNA comb for <a href="http://www.bio-rad.com/en-us/product/mini-sub-cell-gt-cell">Bio-Rad Horizontal Electrophoresis Systems</a>.  List price for these combs are $57.  Shapeways is able to print these combs for about $5 each.</p>
+
+<p>Designed using <a href="http://www.openscad.org/">OpenSCAD</a>, a free program for creating solid 3D CAD objects.  The 3D model is generated using numeric values, allowing anyone to customize it and print their own custom combs.  (No more tape to make larger wells!)</p>
+
+<p>The preset model is specifically designed to work with Thingiverse’s customizer tool.  This allows the non-technical user to modify this model and make their own STL file for printing.</p>
+
+<h2 id="customizer">Customizer</h2>
+<p>This model is configured to work with MakerBot’s Thingiverse Customizer.</p>
+
+<p><img src="https://raw.githubusercontent.com/admish/Electrophoresis-Comb/master/img/thingiverse_customizer.png" alt="Thingiverse Customizer" /></p>
+
+<h2 id="print-your-own">Print your own</h2>
+<ol>
+  <li><a href="https://www.shapeways.com/shops/admish">Purchase on Shapeways</a></li>
+  <li><a href="http://www.thingiverse.com/thing:1346188">Customizer your own on Thingiverse</a></li>
+</ol>]]></content><author><name>admchrysler</name></author><category term="project" /><category term="Electrophoresis" /><category term="openscad" /><category term="3D Modeling" /><summary type="html"><![CDATA[Customizable electrophoresis comb]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://raw.githubusercontent.com/admish/Electrophoresis-Comb/master/img/stl_preview.jpg" /><media:content medium="image" url="https://raw.githubusercontent.com/admish/Electrophoresis-Comb/master/img/stl_preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Stopify: Chrome Extension</title><link href="https://admchrysler.com/pages/admish/admchrysler/stopify-chrome-extension/" rel="alternate" type="text/html" title="Stopify: Chrome Extension" /><published>2013-07-13T18:14:00+00:00</published><updated>2013-07-13T18:14:00+00:00</updated><id>https://admchrysler.com/pages/admish/admchrysler/stopify-chrome-extension</id><content type="html" xml:base="https://admchrysler.com/pages/admish/admchrysler/stopify-chrome-extension/"><![CDATA[<p><img src="https://raw.githubusercontent.com/admish/stopify-chrome/master/images/Screen%20Shot%202013-07-14%20at%204.54.40%20PM.png" alt="Screenshot" /></p>
+
+<p><a href="https://chrome.google.com/webstore/detail/stopify/fhncainmahcgdcoejihgbkfopcmoghlc"><img src="https://img.shields.io/chrome-web-store/v/fhncainmahcgdcoejihgbkfopcmoghlc.svg?maxAge=2592000" alt="Chrome Web Store" /></a> <a href="https://chrome.google.com/webstore/detail/stopify/fhncainmahcgdcoejihgbkfopcmoghlc"><img src="https://img.shields.io/chrome-web-store/rating/fhncainmahcgdcoejihgbkfopcmoghlc.svg?maxAge=2592000" alt="Chrome Web Store" /></a> <a href="https://chrome.google.com/webstore/detail/stopify/fhncainmahcgdcoejihgbkfopcmoghlc"><img src="https://img.shields.io/chrome-web-store/rating-count/fhncainmahcgdcoejihgbkfopcmoghlc.svg?maxAge=2592000" alt="Chrome Web Store" /></a> <a href="https://chrome.google.com/webstore/detail/stopify/fhncainmahcgdcoejihgbkfopcmoghlc"><img src="https://img.shields.io/chrome-web-store/d/fhncainmahcgdcoejihgbkfopcmoghlc.svg?maxAge=2592000" alt="Chrome Web Store" /></a></p>
+
+<p>Allows Spotify users to bypass the ‘Spotify Web Player’ in Chrome and direct all links on the web to the official desktop app.</p>
+
+<hr />
+
+<p><a href="https://chrome.google.com/webstore/detail/stopify/fhncainmahcgdcoejihgbkfopcmoghlc?hl=en-US">Check it out</a> here.
+If you need some help, just <a href="https://github.com/admish/stopify-chrome/issues">tell me</a>.</p>]]></content><author><name>admchrysler</name></author><category term="project" /><category term="chrome" /><summary type="html"><![CDATA[Allows Spotify users to bypass the 'Spotify Web Player' in Chrome and direct all links on the web to the official desktop app.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://raw.githubusercontent.com/admish/stopify-chrome/master/images/icon128.png" /><media:content medium="image" url="https://raw.githubusercontent.com/admish/stopify-chrome/master/images/icon128.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
