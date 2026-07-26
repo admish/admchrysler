@@ -20,9 +20,9 @@ Adm Chrysler
 Ithaca, New York 14850  
 USA  
   
-Email: [hi@admchrysler.com][3]  
+Contact: [via the contact form](/contact/)  
 <!--PGP Fingerprint: [BAA4 D073 4DF0 3BE1 A0C0 63CA AC3A BCDA 0CE1 914E][4]  -->
 
 
-[3]: mailto:hi@admchrysler.com
+[3]: /contact/
 [4]: /pgp

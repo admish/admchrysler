@@ -3,71 +3,50 @@ title: Résumé (CV)
 layout: page
 ---
 
+*Updated July 2026. Full CV with contact details available on request via [LinkedIn](https://www.linkedin.com/in/adium/).*
+
+**Infrastructure and Platform Engineer** · Upstate New York · [LinkedIn](https://www.linkedin.com/in/adium/) · [GitHub](https://github.com/admish)
+
+Infrastructure and platform engineer with 20+ years running production systems end to end. Eight years as sole IT owner of a Cornell University research institute serving roughly 200 users: 900 TB of RAID6 storage, seven GPU compute nodes, and 35 production web properties with zero data-loss incidents. Currently design and operate a heterogeneous 20-host platform running 110+ services behind SSO, a CrowdSec IDS edge, self-hosted GitLab CI, and Prometheus observability.
+
 ## Employment
 
+### Systems Administrator | Plan First Technologies | 2024 to 2026 | Cortland, NY
+* Tier 2 escalation across Windows, macOS, and Linux for a regional MSP supporting 100+ managed client organizations.
+* Built and maintained the firm's Windows provisioning tooling: a self-elevating PowerShell configuration script delivered through a one-line bootstrap, applied to every new and remediated system.
+* Authored the Microsoft 365 account-compromise incident response playbook: Entra ID sign-in analysis, session and MFA revocation sequencing, and blast-radius assessment.
+* Hardened Microsoft 365 tenants with Conditional Access policies, MFA enforcement, and Huntress EDR/ITDR. Deployed BitLocker fleet-wide with NinjaOne recovery-key escrow.
+* Root-caused an office-wide Windows Update failure scoped for 12 machine rebuilds to a single SonicWall Gateway AV setting stripping BITS byte-range headers. Resolved in under three hours.
+* Built a 900+ document technical knowledge base spanning 100+ client environments on personal initiative.
 
-### IT Manager / System Administrator | Cornell University 2015-Present | Ithaca, NY
-* Provide Linux/Unix administration, including shell scripting, for several labs in the Institute.
-* Conduct MySQL and PostgreSQL database administration in Linux environments, including performance analysis and tuning.
-* Work with machine learning, predictive modeling, and related development technologies. 
-* Help data scientists set up custom Conda Python coding notebooks in development environments for use on a JupyterHub host,and capturing it for automated deployment.
-* Create and migrate virtual machines using Docker, VMWare, and other similar technologies.
-* Develop and maintain multiple Web servers, related applications, and Services Oriented Architectures (such as Apache, NGINX, Python, PHP, SQL and Flask).
-* Provide nameserver administration of hostnames and domain names.
+### IT Manager | Cornell University, Weill Institute for Cell and Molecular Biology | 2014 to 2022 | Ithaca, NY
+* Sole IT staff for a research institute of roughly 200 users. Owned the entire stack: infrastructure, security, procurement, and end-user support.
+* Maintained 900 TB of RAID6 network-attached storage across eight years with zero data-loss incidents.
+* Built and administered seven GPU compute nodes for machine learning, image analysis, and computational biology workloads.
+* Operated 35 production web properties on Apache and NGINX with Python, PHP, SQL, and Flask backends.
+* Administered JupyterHub environments with reproducible per-group Conda deployments; MySQL and PostgreSQL administration and tuning.
+* Supported a mixed macOS and Windows fleet of about 300 devices alongside Linux computational servers.
 
-### Technology Consultant | Cornell University 2013-2015 | Ithaca, NY
-* Fulfilled online e-shop orders for Technology Connection
-* Volume software licensing and support for entire campus
-* Handled ordering for all Apple products on campus
-* Customer service and sales support via phone and e-mail
-* Wordpress theme design Perform skilled fitting of parts, sub-assemblies and related mechanical units.
+### Technology Consultant | Cornell University, The Cornell Store | 2013 to 2014 | Ithaca, NY
+* Campus-wide volume software licensing and primary contact for Apple hardware procurement across the university.
 
-### Web designer/developer | Self-Employed 2005-2012 | Martinez, CA
-* Met and corresponded with clients to determine client needs for company sites.
-* Developed and maintained intranet and internet for company websites utilizing Dreamweaver, Flash, and Photoshop.
-* Created corporate web sites, portals, and large-scale web applications.
-* Developed and designed new web interfaces, layouts, and site graphics including icons and logos using Illustrator and Photoshop
-* Comprehensive technical knowledge of HTML, CSS, PHP, AJAX, MySQL, and Javascript coding.
-* Responsible for quality assurance of finished websites including the validation of web forms and links.
-* Installed shopping carts for business client websites.
-* Created and maintained database driven intranet sites.
-* Extensive knowledge of web production, multimedia development and design principles.
+### Web Designer and Developer | Self-Employed | 2005 to 2012 | Martinez, CA
+* Built and maintained client websites, intranet portals, and database-driven web applications on LAMP/LEMP stacks.
+* Independently built and operated a community website reaching 500,000 unique visitors per month, including capacity scaling, DDoS mitigation, and defense against fraudulent DMCA claims.
 
-### Military Communications Sergeant | United States Army 2003-2007 | Fort Campbell, KY
-* Veteran with 5 years proven success in logistical management, IT, and military unit deployments.
-* Maintained 'Secret' level security clearance.
-* Established secure communications via TROPO satellite, CX cable, CODEM, and line-of-site UHF band frequencies.
-* Conducted training seminars on the use of military GPS/GIS equipment with instructional aids created in PowerPoint.
-* Appointed as company level COMSEC custodian responsible for distribution and security of classified encryption keys.
-* Accountable for over $11 million worth of highly sensitive secret military communications equipment.
-* Implemented large secure networks consisting of VOIP phones, video conferencing displays, laptop computers, and various other devices.
-* Basic mechanical repair on motor vehicles.
+### Communications Sergeant, MOS 25U | United States Army | 2003 to 2007 | Fort Campbell, KY
+* Established secure tactical communications networks over TROPO satellite, CX cable, CODEM, and UHF line-of-sight.
+* Company-level COMSEC custodian accountable for classified encryption keys and over $11 million in communications equipment.
+* Held a Secret security clearance for the duration of service. Honorably discharged.
 
+## Platform Engineering
+
+Designed, built, and operate a production internal developer platform across roughly 20 physical hosts: a 14-node Proxmox VE cluster running about 110 services (LXC and Docker), Ceph distributed storage, self-hosted GitLab CE with CI runners on Linux and Windows, Prometheus/Alertmanager/Grafana/Graylog observability, CrowdSec IDS at the NGINX ingress, Authentik/Authelia SSO with OIDC, an internal certificate authority, and n8n workflow automation. Documented in a 468-page self-hosted MediaWiki.
+
+## Skills
+
+**Linux and OS:** Debian, Ubuntu, RHEL/CentOS, Windows Server, macOS · **Virtualization:** Proxmox VE, KVM/QEMU, Hyper-V, VMware ESXi, LXC, Docker · **Networking:** DNS (split-horizon), VLAN segmentation, Ubiquiti UniFi, WireGuard, Cloudflare Tunnel, NGINX · **Security:** CrowdSec, ModSecurity/OWASP CRS, OIDC SSO, PKI, Vaultwarden, Conditional Access, incident response · **Observability:** Prometheus, Alertmanager, Grafana, InfluxDB, Graylog · **Platform:** GitLab CE and CI, SonarQube, n8n, Elasticsearch · **Data:** ZFS, Ceph, MySQL/MariaDB, PostgreSQL · **Scripting:** Bash, Python, PowerShell
 
 ## Education
-### Diablo Valley College | Pleasant Hill, CA
-* Associates in Arts | Art Digital Media / Web Design; 2012
-* Certificate | Computer Science - Mobile and Enterprise Java Programming; 2012
-* Certificate | Computer Science - Advanced Java Programming; 2011
 
-### United States Army | Fort Benning, GA
-* Basic Combat Training (2003)
-* Multichannel Transmission Operator/Maintainer Echelons Corps and Below (2003)
-* Combat Life Saver Medical Course (2004)
-* Switching Systems Operator (2005-2006)
-* Introduction to Defense Reutilization/Marketing System (2005-2006)
-* Defense Hazardous Materials/Waste Handling (2005-2006)
-* Defense Basic Preservation and Packing Course (2005-2006)
-* Defense Marking for Shipment and Storage (2005-2006)
-
-### OCM Boces | Cortland, NY
-* Certificate | Commercial Art/Photography; 1998
-
-## Achievements
-* Created website as a side project for Army soldiers which brought in over 500,000 unique visitors a month.
-* Earned expert marksmanship status on every weapon made available for qualification during my time in the Army.
-* Awarded 4 medals and 12 challenge coins from the Army.
-
-## Initiatives
-
-## Interests
+Associate of Arts, Digital Media and Web Design, Diablo Valley College, 2012 · U.S. Army technical training (25U), 2003 to 2006
