@@ -5,12 +5,8 @@ permalink: /contact/
 ---
 
 <form action="https://api.web3forms.com/submit" method="POST">
-  <!-- TODO(adm): replace with your Web3Forms access key (sign up with the private address; the key itself is safe to publish) -->
-  <input type="hidden" name="access_key" value="Ya1c6b4f1-0bce-47f8-9ab0-98dc56dd5817">
+  <input type="hidden" name="access_key" value="a1c6b4f1-0bce-47f8-9ab0-98dc56dd5817">
   <input type="hidden" name="subject" value="Contact form: admchrysler.com">
-
-  <!-- honeypot: bots fill this, humans never see it -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
 
   <p>
     <label for="name">Name</label><br>
@@ -24,7 +20,11 @@ permalink: /contact/
     <label for="message">Message</label><br>
     <textarea id="message" name="message" rows="6" required style="width:100%;max-width:28rem;"></textarea>
   </p>
+  <div class="h-captcha" data-captcha="true" style="margin-bottom:1rem;"></div>
+
   <p><button type="submit">Send</button></p>
 </form>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
 
 <p><em>Or reach me on <a href="https://www.linkedin.com/in/adium/">LinkedIn</a>.</em></p>

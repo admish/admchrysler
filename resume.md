@@ -16,7 +16,7 @@ Infrastructure and platform engineer with 20+ years running production systems e
 * Built and maintained the firm's Windows provisioning tooling: a self-elevating PowerShell configuration script delivered through a one-line bootstrap, applied to every new and remediated system.
 * Authored the Microsoft 365 account-compromise incident response playbook: Entra ID sign-in analysis, session and MFA revocation sequencing, and blast-radius assessment.
 * Hardened Microsoft 365 tenants with Conditional Access policies, MFA enforcement, and Huntress EDR/ITDR. Deployed BitLocker fleet-wide with NinjaOne recovery-key escrow.
-* Root-caused an office-wide Windows Update failure scoped for 12 machine rebuilds to a single SonicWall Gateway AV setting stripping BITS byte-range headers. Resolved in under three hours.
+* Root-caused an office-wide Windows Update failure scoped for 12 machine rebuilds to a single SonicWall Gateway AV setting stripping BITS byte-range headers. Resolved in under two hours.
 * Built a 900+ document technical knowledge base spanning 100+ client environments on personal initiative.
 
 ### IT Manager | Cornell University, Weill Institute for Cell and Molecular Biology | 2014 to 2022 | Ithaca, NY
@@ -34,10 +34,11 @@ Infrastructure and platform engineer with 20+ years running production systems e
 * Built and maintained client websites, intranet portals, and database-driven web applications on LAMP/LEMP stacks.
 * Independently built and operated a community website reaching 500,000 unique visitors per month, including capacity scaling, DDoS mitigation, and defense against fraudulent DMCA claims.
 
-### Communications Sergeant, MOS 25U | United States Army | 2003 to 2007 | Fort Campbell, KY
+### Communications Sergeant, MOS 25Q | United States Army | 2003 to 2007 | Fort Campbell, KY
 * Established secure tactical communications networks over TROPO satellite, CX cable, CODEM, and UHF line-of-sight.
 * Company-level COMSEC custodian accountable for classified encryption keys and over $11 million in communications equipment.
-* Held a Secret security clearance for the duration of service. Honorably discharged.
+* Lead instructor for a 14-module advanced operator course on the Defense Advanced GPS Receiver (DAGR).
+* Held a Secret security clearance for the duration of service.
 
 ## Platform Engineering
 

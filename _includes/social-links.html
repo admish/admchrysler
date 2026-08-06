@@ -107,7 +107,7 @@
         </a>
     {% endif %}
 
-    {% if site.email %}
+    {% if site.email != blank %}
         <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}">
             <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
         </a>

@@ -1,26 +1,23 @@
-.DS_Store
-_site
-.sass-cache
+# --- Jekyll build output & caches ---
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# --- Ruby / Bundler ---
 Gemfile.lock
 vendor/
 
-# ---> macOS
+# --- Tooling ---
+.claude/
+
+# --- macOS ---
+# A bare pattern matches at any depth, so one entry covers nested cases too.
 .DS_Store
-*.DS_Store
-*/.DS_Store
-**/.DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
 ._*
 .@__thumb
-
-# Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -28,43 +25,25 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
 
-# ---> Windows
-# Windows image file caches
+# --- Windows ---
 Thumbs.db
 ehthumbs.db
 ehthumbs_vista.db
-
-# Folder config file
 Desktop.ini
-
-# Recycle Bin used on file shares
 $RECYCLE.BIN/
-
-# Windows Installer files
 *.cab
 *.msi
 *.msm
 *.msp
-
-# Windows shortcuts
 *.lnk
 
-# ---> Linux
+# --- Linux ---
 *~
-
-# KDE directory preferences
 .directory
-
-# Linux trash folder which might appear on any partition or disk
 .Trash-*
-
-## Use this to find an delete any files/folders you wish to remove
-## find . -name ".@__thumb" -exec rm -R {} \;
